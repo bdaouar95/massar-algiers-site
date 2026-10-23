@@ -1,5 +1,5 @@
 /* =====================================================================
-   CONTENU DU SITE MASSAR ALGIERS
+   CONTENU DU SITE MASSAR ALGIERS (v2)
    ---------------------------------------------------------------------
    C'est le SEUL fichier à modifier pour mettre à jour le site.
    - Ajouter une offre : copier un bloc { ... } dans OFFRES et l'adapter
@@ -7,6 +7,7 @@
    - Changer un prix : modifier le texte entre guillemets
    Chaque texte existe en français (fr) et en arabe (ar).
    Attention : garder les guillemets ' ' et les virgules en fin de ligne.
+   Les 4 premières offres apparaissent aussi en vignettes dans le haut du site.
    ===================================================================== */
 
 window.MASSAR = {
@@ -14,36 +15,51 @@ window.MASSAR = {
   // Numéro WhatsApp principal (format international, sans + ni espaces)
   whatsapp: '213660447167',
 
+  // Grande photo du haut de la page
+  hero: 'assets/offres/hero-desert-hd.jpg',
+
   // ─── Offres du moment ────────────────────────────────────────────────
-  // prix : mettre null pour afficher « Prix sur demande »
-  // icones : noms d'icônes Material Symbols (https://fonts.google.com/icons)
+  // cat : turquie | asie | algerie | tunisie | omra  (sert aux filtres)
+  // image : affiche de l'offre (format portrait ou carré, le haut reste visible)
   OFFRES: [
     {
-      id: 'istanbul', photo: 'assets/photos/offre-istanbul.jpg',
-      icones: ['hotel', 'flight', 'airport_shuttle', 'tour'],
-      fr: { pays: 'Turquie', titre: 'Istanbul', duree: '7 jours / 6 nuits', prixLabel: 'par personne', prix: '109 000 DA', note: 'Par personne, en chambre double', inclus: ['Graziella Gold 4★', 'Turkish Airlines', 'Transferts', '3 sorties'], detail: 'Îles des Princes · Sapanca · Croisière sur le Bosphore' },
-      ar: { pays: 'تركيا', titre: 'إسطنبول', duree: '7 أيام / 6 ليالٍ', prixLabel: 'للشخص', prix: '109 000 دج', note: 'للشخص الواحد في غرفة مزدوجة', inclus: ['Graziella Gold 4★', 'الخطوط التركية', 'التنقلات', '3 خرجات'], detail: 'جزر الأميرات · سبانجا · رحلة بحرية في البوسفور' }
+      id: 'istanbul', cat: 'turquie', image: 'assets/offres/istanbul-octobre.jpg',
+      fr: { titre: 'Istanbul', lieu: 'Turquie', quand: 'Prochain départ : 25 octobre', prixLabel: 'À partir de', prix: '107 000 DA', inclus: ['Turkish Airlines', 'Graziella Gold, petit-déjeuner', 'Îles des Princesses & Sapanca avec déjeuner', 'Croisière Bosphore', 'Assistance sur place'] },
+      ar: { titre: 'إسطنبول', lieu: 'تركيا', quand: 'الرحلة القادمة: 25 أكتوبر', prixLabel: 'ابتداءً من', prix: '107 000 دج', inclus: ['الخطوط التركية', 'فندق Graziella Gold مع فطور', 'جزر الأميرات وسبانجا مع غداء', 'رحلة بحرية في البوسفور', 'مرافقة في عين المكان'] }
     },
     {
-      id: 'oued-souf', photo: 'assets/photos/offre-oued-souf.jpg',
-      icones: ['directions_car', 'landscape', 'two_wheeler', 'restaurant'],
-      fr: { pays: 'Algérie · Sahara', titre: 'Oued Souf', duree: '4 jours / 3 nuits', prixLabel: 'par personne', prix: '69 000 DA', note: 'Aventure dans le Sahara', inclus: ['Safari 4x4', 'Chameau', 'Quad', 'Soirée méchoui'], detail: 'Visite de Guemar incluse' },
-      ar: { pays: 'الجزائر · الصحراء', titre: 'وادي سوف', duree: '4 أيام / 3 ليالٍ', prixLabel: 'للشخص', prix: '69 000 دج', note: 'مغامرة في الصحراء', inclus: ['سفاري 4x4', 'ركوب الجمال', 'دراجة رباعية', 'سهرة مشوي'], detail: 'زيارة قمار مشمولة' }
+      id: 'sousse', cat: 'tunisie', image: 'assets/offres/sousse.jpg',
+      fr: { titre: 'Sousse', lieu: 'Tunisie', quand: '5 nuits', prixLabel: 'À partir de', prix: '49 000 DA', inclus: ['Bus au départ de 8 villes', '3 hôtels au choix', 'Demi-pension', '3 excursions offertes'] },
+      ar: { titre: 'سوسة', lieu: 'تونس', quand: '5 ليالٍ', prixLabel: 'ابتداءً من', prix: '49 000 دج', inclus: ['حافلة من 8 مدن', '3 فنادق للاختيار', 'نصف إقامة', '3 رحلات مجانية'] }
     },
     {
-      id: 'sousse', photo: 'assets/photos/offre-sousse.jpg',
-      icones: ['directions_bus', 'hotel', 'restaurant', 'tour'],
-      // TODO : mettre le vrai prix (ex. prix: '52 000 DA' et prix: '52 000 دج')
-      fr: { pays: 'Tunisie', titre: 'Sousse', duree: 'Séjour organisé', prixLabel: 'à partir de', prix: null, note: 'Par personne, selon l’hôtel choisi', inclus: ['Bus depuis 8 villes', '3 hôtels au choix', 'Demi-pension', '3 excursions offertes'], detail: 'Circuit en bus au départ de 8 villes' },
-      ar: { pays: 'تونس', titre: 'سوسة', duree: 'إقامة منظمة', prixLabel: 'ابتداءً من', prix: null, note: 'للشخص، حسب الفندق المختار', inclus: ['حافلة من 8 مدن', '3 فنادق للاختيار', 'نصف إقامة', '3 رحلات مجانية'], detail: 'رحلة بالحافلة انطلاقاً من 8 مدن' }
+      id: 'oued-souf', cat: 'algerie', image: 'assets/offres/oued-souf.jpg',
+      fr: { titre: 'Oued Souf', lieu: 'Algérie · Sahara', quand: '4 jours / 3 nuits', prixLabel: 'Prix', prix: '69 000 DA', inclus: ['Safari 4x4', 'Chameau', 'Quad', 'Guemar', 'Soirée méchoui'] },
+      ar: { titre: 'وادي سوف', lieu: 'الجزائر · الصحراء', quand: '4 أيام / 3 ليالٍ', prixLabel: 'السعر', prix: '69 000 دج', inclus: ['سفاري 4x4', 'ركوب الجمال', 'دراجة رباعية', 'قمار', 'سهرة مشوي'] }
+    },
+    {
+      id: 'kl-bali', cat: 'asie', image: 'assets/offres/indonesie-malaisie.jpg',
+      fr: { titre: 'Kuala Lumpur – Bali', lieu: 'Indonésie / Malaisie', quand: '11 jours / 10 nuits', prixLabel: 'Tarif', prix: 'Sur demande', inclus: ['Vol direct Alger – Kuala Lumpur', 'Hôtels 5★ avec petit-déjeuner', 'Vols internes et transferts', '2 excursions privées, guide anglophone'] },
+      ar: { titre: 'كوالالمبور – بالي', lieu: 'إندونيسيا / ماليزيا', quand: '11 يوماً / 10 ليالٍ', prixLabel: 'السعر', prix: 'عند الطلب', inclus: ['رحلة مباشرة الجزائر – كوالالمبور', 'فنادق 5 نجوم مع فطور', 'رحلات داخلية وتنقلات', 'رحلتان خاصتان ومرشد بالإنجليزية'] }
+    },
+    {
+      id: 'istanbul-antalya', cat: 'turquie', image: 'assets/offres/istanbul-antalya.jpg',
+      fr: { titre: 'Istanbul + Antalya', lieu: 'Turquie', quand: '10 jours / 9 nuits', prixLabel: 'À partir de', prix: '297 000 DA', inclus: ['Turkish Airlines', 'Venera Old City 4★, petit-déjeuner', 'Venera Antalya 4★, all inclusive', 'Assistance 24/7'] },
+      ar: { titre: 'إسطنبول + أنطاليا', lieu: 'تركيا', quand: '10 أيام / 9 ليالٍ', prixLabel: 'ابتداءً من', prix: '297 000 دج', inclus: ['الخطوط التركية', 'Venera Old City 4★ مع فطور', 'Venera أنطاليا 4★ شامل كلياً', 'مساعدة 24/7'] }
+    },
+    {
+      id: 'omra', cat: 'omra', image: 'assets/offres/omra-169000.jpg',
+      fr: { titre: 'Omra', lieu: 'Arabie saoudite', quand: 'Octobre · Novembre · Décembre', prixLabel: 'À partir de', prix: '169 000 DA', inclus: ['Vols directs depuis l’Algérie', 'Hôtels proches du Haram', 'Meilleurs guides', 'Confort et sécurité'] },
+      ar: { titre: 'عمرة', lieu: 'السعودية', quand: 'أكتوبر · نوفمبر · ديسمبر', prixLabel: 'ابتداءً من', prix: '169 000 دج', inclus: ['رحلات مباشرة من الجزائر', 'أقرب الفنادق للحرم', 'أفضل المرشدين', 'راحة وأمان طوال الرحلة'] }
     }
   ],
 
   // ─── Omra ────────────────────────────────────────────────────────────
   OMRA: {
-    fr: { periode: 'Octobre / Novembre 2026', titre: 'Omra 2026', aPartirDe: '169 000 DA',
+    image: 'assets/offres/omra-169000.jpg',
+    fr: { aPartirDe: '169 000 DA', periode: 'Omra 2026',
           medine: '3 nuits à Médine pour tous les départs : hôtel Hayat Al Huda (≈ 300 m, zone centrale) ou Afaq Al Fiddi (≈ 800 m, 10 min à pied).' },
-    ar: { periode: 'أكتوبر / نوفمبر 2026', titre: 'عمرة 2026', aPartirDe: '169 000 دج',
+    ar: { aPartirDe: '169 000 دج', periode: 'عمرة 2026',
           medine: 'كل الرحلات 03 ليالٍ في المدينة: فندق حياة الهدى (حوالي 300 م، المنطقة المركزية) أو فندق آفاق الفضي (حوالي 800 م، 10 دقائق مشياً).' },
     // prix par personne en DA, dans l'ordre : [quintuple, quadruple, triple, double]
     departs: [
@@ -52,7 +68,7 @@ window.MASSAR = {
         ar: { date: '26 أكتوبر 2026', compagnie: 'الخطوط الجزائرية', trajet: 'جدة – المدينة' },
         hotels: [
           { fr: { nom: 'Abraj Al Kiswa', distance: '≈ 950 m du Haram · navette' }, ar: { nom: 'أبراج الكسوة', distance: '≈ 950 م من الحرم · نقل متوفر' }, prix: ['169 000', '179 000', '189 000', '209 000'] },
-          { fr: { nom: 'Al Risala', distance: '≈ 700 m du Haram · 10 min à pied' }, ar: { nom: 'فندق الرسالة', distance: '≈ 700 م من الحرم · 10 دقائق مشياً' }, prix: ['–', '209 000', '239 000', '275 000'] }
+          { fr: { nom: 'Al Risala', distance: '≈ 700 m · 10 min à pied' }, ar: { nom: 'فندق الرسالة', distance: '≈ 700 م · 10 دقائق مشياً' }, prix: ['–', '209 000', '239 000', '275 000'] }
         ]
       },
       {
@@ -60,31 +76,51 @@ window.MASSAR = {
         ar: { date: '04 نوفمبر 2026', compagnie: 'طيران ناس', trajet: 'المدينة – جدة' },
         hotels: [
           { fr: { nom: 'Abraj Al Kiswa', distance: '≈ 950 m du Haram · navette' }, ar: { nom: 'أبراج الكسوة', distance: '≈ 950 م من الحرم · نقل متوفر' }, prix: ['169 000', '189 000', '199 000', '219 000'] },
-          { fr: { nom: 'Saraya Al Misk', distance: '≈ 580 m du Haram · 8 min à pied' }, ar: { nom: 'سرايا المسك', distance: '≈ 580 م من الحرم · 8 دقائق مشياً' }, prix: ['209 000', '225 000', '249 000', '295 000'] }
+          { fr: { nom: 'Saraya Al Misk', distance: '≈ 580 m · 8 min à pied' }, ar: { nom: 'سرايا المسك', distance: '≈ 580 م · 8 دقائق مشياً' }, prix: ['209 000', '225 000', '249 000', '295 000'] }
         ]
       }
     ]
   },
 
-  // ─── Lignes maritimes ────────────────────────────────────────────────
-  MER: [
-    { compagnie: 'Baleària', lignes: [['Oran', 'Valencia'], ['Mostaganem', 'Valencia'], ['Alger', 'Valencia'], ['Alger', 'Barcelona']] },
-    { compagnie: 'Nouris El Bahr', lignes: [['Alger', 'Marseille'], ['Alger', 'Alicante'], ['Oran', 'Alicante']] },
-    { compagnie: 'GNV', lignes: [['Alger', 'Sète'], ['Béjaïa', 'Sète']] }
+  // ─── Billets maritimes (dans les deux sens) ──────────────────────────
+  MER: {
+    image: 'assets/offres/maritime-ete.jpg',
+    fr: { aPartirDe: '22 900 DA' },
+    ar: { aPartirDe: '22 900 دج' },
+    compagnies: [
+      { nom: 'Baleària', lignes: [['Mostaganem / Alger / Oran', 'Valence'], ['Alger / Oran', 'Barcelone']] },
+      { nom: 'Nouris El Bahr', lignes: [['Alger / Oran', 'Alicante'], ['Alger', 'Marseille']] },
+      { nom: 'GNV', lignes: [['Alger / Béjaïa', 'Sète']] }
+    ]
+  },
+
+  // ─── Services (visas, salons) ────────────────────────────────────────
+  SERVICES: [
+    { image: 'assets/photos/service-visa-espagne.jpg',
+      fr: { titre: 'Visa d’études Espagne', desc: 'Choix d’université, dossier complet, suivi jusqu’à l’obtention.' },
+      ar: { titre: 'تأشيرة الدراسة في إسبانيا', desc: 'اختيار الجامعة، ملف كامل، متابعة حتى الحصول على التأشيرة.' } },
+    { image: 'assets/offres/visa-hongrie.jpg',
+      fr: { titre: 'Visa d’études Hongrie', desc: 'Choix d’université et pré-inscription, dossier visa complet, suivi jusqu’à l’obtention.' },
+      ar: { titre: 'تأشيرة الدراسة في المجر', desc: 'اختيار الجامعة والتسجيل المسبق، ملف تأشيرة كامل، متابعة حتى الحصول عليها.' } },
+    { image: 'assets/photos/service-visa-chine.jpg',
+      fr: { titre: 'Visa Chine', desc: 'Documents pour une première demande ou un renouvellement.' },
+      ar: { titre: 'تأشيرة الصين', desc: 'وثائق الطلب الأول أو التجديد.' } },
+    { image: 'assets/photos/service-salons-italie.jpg',
+      fr: { titre: 'Salons en Italie', desc: 'Architectes, designers, entreprises : invitations officielles, lettres de soutien visa.' },
+      ar: { titre: 'معارض إيطاليا', desc: 'للمهندسين والمصممين والشركات: دعوات رسمية ورسائل دعم التأشيرة.' } }
   ],
 
   // ─── Avis clients ────────────────────────────────────────────────────
-  // UNIQUEMENT de vrais avis de clients de Massar Algiers.
   // Tant que la liste est vide, la section « Avis clients » est masquée.
   // Modèle :
-  // { nom: 'Prénom Nom', moisAgo: 2, voyage: 'Istanbul 2026', texte: 'Texte de l’avis…', source: 'Google' },
+  // { nom: 'Prénom Nom', moisAgo: 2, voyage: 'Istanbul 2026', texte: 'Texte de l’avis…' },
   // ⚠️ TEMPORAIRE : ces 4 avis viennent de la fiche Google d'une autre agence (Riwaya Travel).
   // À REMPLACER par de vrais avis Massar Algiers AVANT toute mise en ligne.
   AVIS: [
-    { nom: 'Ferry Aile', moisAgo: 9, texte: 'Nous avons passé un séjour exceptionnel. 2 jours à Alger, 1 journée à Tipaza et trek de 5 jours à Sefar dans le Tassili N’ajjer. Tout a été parfait, de la première jusqu’à la dernière seconde…', source: 'Google' },
-    { nom: 'Marius Berdi', moisAgo: 9, texte: 'Cela fait presque un an que je suis partie dans le Hoggar, et les mots me manquent encore pour décrire à quel point cette expérience fut unique et marquante. …', source: 'Google' },
-    { nom: 'Kalia Tayeb', moisAgo: 9, voyage: 'TADRART Rouge - Djanet 28 Déc', texte: 'Le voyage s’est parfaitement déroulé du début à la fin. Service au-dessus de tout, accueil et prise en charge excellents. …', source: 'Google' },
-    { nom: 'Jean-Christophe Clement', moisAgo: 7, texte: 'This was a very comprehensive tour of Algier. While much more expensive than doing your own self-tour, if you only have a day or two in Algier, it is the better option to avoid getting lost in the casbah…', source: 'Google' }
+    { nom: 'Ferry Aile', moisAgo: 9, texte: 'Nous avons passé un séjour exceptionnel. 2 jours à Alger, 1 journée à Tipaza et trek de 5 jours à Sefar dans le Tassili N’ajjer. Tout a été parfait, de la première jusqu’à la dernière seconde…' },
+    { nom: 'Marius Berdi', moisAgo: 9, texte: 'Cela fait presque un an que je suis partie dans le Hoggar, et les mots me manquent encore pour décrire à quel point cette expérience fut unique et marquante. …' },
+    { nom: 'Kalia Tayeb', moisAgo: 9, voyage: 'TADRART Rouge - Djanet 28 Déc', texte: 'Le voyage s’est parfaitement déroulé du début à la fin. Service au-dessus de tout, accueil et prise en charge excellents. …' },
+    { nom: 'Jean-Christophe Clement', moisAgo: 7, texte: 'This was a very comprehensive tour of Algier. While much more expensive than doing your own self-tour, if you only have a day or two in Algier, it is the better option to avoid getting lost in the casbah…' }
   ],
 
   // ─── Liens ───────────────────────────────────────────────────────────
