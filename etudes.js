@@ -51,6 +51,7 @@
         { drap: '🇭🇺', rang: 'Europe centrale', nom: 'Hongrie', acc: 'Plus de 200 programmes en anglais dans des universités réputées.', pts: ['Cursus en anglais', 'Bourse Stipendium Hungaricum pour les meilleurs dossiers', 'Diplôme européen'] },
         { drap: '🇨🇳', rang: 'Asie', nom: 'Chine', acc: 'Licence et master en anglais ou en chinois, dans de grandes universités.', pts: ['Année prépa de chinois si besoin', 'Visa délivré sur lettre d’admission', 'Bourses de certaines universités'] }
       ],
+      paysCta: 'Je veux étudier ici',
       paysPlus: 'Licence et master, toutes les spécialités : le pays se choisit selon ton profil, ta langue et ton budget.',
       source: 'Les frais de scolarité dépendent de l’université et du programme. Ils sont confirmés par écrit avec chaque université avant toute inscription, et payés directement sur son compte.',
       offrePill: 'Notre accompagnement', offreH1: 'De ton inscription', offreH2: 'à ton arrivée sur place.',
@@ -115,6 +116,7 @@
         { drap: '🇭🇺', rang: 'أوروبا الوسطى', nom: 'المجر', acc: 'أكثر من 200 برنامج بالإنجليزية في جامعات مرموقة.', pts: ['الدراسة بالإنجليزية', 'منحة Stipendium Hungaricum لأفضل الملفات', 'شهادة أوروبية'] },
         { drap: '🇨🇳', rang: 'آسيا', nom: 'الصين', acc: 'ليسانس وماستر بالإنجليزية أو بالصينية، في جامعات كبرى.', pts: ['سنة تحضيرية للصينية عند الحاجة', 'تأشيرة تُمنح برسالة القبول', 'منح من بعض الجامعات'] }
       ],
+      paysCta: 'أريد الدراسة هنا',
       paysPlus: 'ليسانس وماستر، كل التخصصات: يُختار البلد حسب ملفك ولغتك وميزانيتك.',
       source: 'رسوم الدراسة تختلف حسب الجامعة والبرنامج. نؤكدها كتابياً مع كل جامعة قبل التسجيل، وتُدفع مباشرة في حسابها.',
       offrePill: 'مرافقتنا', offreH1: 'من تسجيلك', offreH2: 'إلى وصولك.',
@@ -247,6 +249,7 @@
             '<div class="pays-top"><span class="pays-rang">' + esc(p.rang) + '</span><span class="pays-drap" aria-hidden="true">' + p.drap + '</span></div>' +
             '<h3>' + esc(p.nom) + '</h3><p class="pays-accroche">' + esc(p.acc) + '</p>' +
             '<ul>' + map(p.pts, function (x) { return '<li>' + ic('check_circle') + '<span>' + esc(x) + '</span></li>'; }) + '</ul>' +
+            '<a class="pays-cta" href="#diagnostic" data-pays="' + esc(p.nom) + '">' + esc(t.paysCta) + ic(rtl ? 'arrow_back' : 'arrow_forward') + '</a>' +
           '</article>';
         }) + '</div>' +
         '<p class="e-source"><b>' + esc(t.paysPlus) + '</b><br>' + esc(t.source) + '</p>' +
@@ -349,9 +352,33 @@
       '</footer>' +
 
       '<p class="e-credits" dir="ltr">Photos : ' + CREDITS.map(function (c) { return '<a href="' + c[3] + '" target="_blank" rel="noopener">' + esc(c[0]) + '</a> (' + esc(c[1]) + ', ' + c[2] + ')'; }).join(' · ') + ', via Wikimedia Commons.</p>' +
+      '<a class="e-sticky" href="#diagnostic">' + ic('school') + esc(t.btn) + '</a>' +
       '<a class="wa-float" href="' + waGen + '" target="_blank" rel="noopener" aria-label="WhatsApp">' + waIco() + '</a>' +
       '</div>';
+    boutonFlottant();
     if (window.MASSAR_ANIM) (document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve()).then(function () { window.MASSAR_ANIM(); });
+  }
+
+  // Clic sur un pays : on pré-remplit le pays dans le formulaire (le défilement est géré par le lien #diagnostic)
+  document.addEventListener('click', function (e) {
+    var lien = e.target.closest('[data-pays]');
+    if (!lien) return;
+    var form = document.getElementById('form');
+    if (!form) return;
+    var choix = form.elements.pays, nom = lien.getAttribute('data-pays');
+    for (var i = 0; i < choix.options.length; i++) { if (choix.options[i].text === nom) { choix.selectedIndex = i; break; } }
+    form.classList.remove('e-flash'); void form.offsetWidth; form.classList.add('e-flash');
+    setTimeout(function () { try { form.elements.nom.focus({ preventScroll: true }); } catch (err) {} }, 1200);
+  }, true);
+
+  // Bouton « Diagnostic gratuit » flottant : visible après le haut de page, caché quand le formulaire est à l'écran
+  function boutonFlottant() {
+    var b = document.querySelector('.e-sticky'), hero = document.querySelector('.e-hero'), diag = document.getElementById('diagnostic');
+    if (!b || !hero || !diag || !('IntersectionObserver' in window)) return;
+    var heroVu = true, diagVu = false;
+    function maj() { b.classList.toggle('visible', !heroVu && !diagVu); }
+    new IntersectionObserver(function (en) { heroVu = en[0].isIntersecting; maj(); }).observe(hero);
+    new IntersectionObserver(function (en) { diagVu = en[0].isIntersecting; maj(); }, { threshold: 0.15 }).observe(diag);
   }
 
   document.addEventListener('click', function (e) {
