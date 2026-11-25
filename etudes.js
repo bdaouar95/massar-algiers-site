@@ -9,7 +9,7 @@
 
   // Photos libres de droits (Wikimedia Commons). Les crédits s'affichent en bas de page, obligatoires pour CC BY-SA.
   var HERO = 'assets/etudes/hero-etudiants-cluj.jpg';
-  var PHOTOS_PAYS = ['assets/etudes/roumanie-umf-iasi.jpg', 'assets/etudes/espagne-universite-alicante.jpg', 'assets/etudes/italie-universite-padoue.jpg', 'assets/etudes/tchequie-universite-charles.jpg', 'assets/etudes/moldavie-usmf-chisinau.jpg', 'assets/etudes/bulgarie-universite-sofia.jpg', 'assets/etudes/hongrie-universite-debrecen.jpg', 'assets/etudes/chine-universite-tsinghua.jpg'];
+  var PHOTOS_PAYS = ['assets/etudes/roumanie-umf-iasi.jpg', 'assets/etudes/espagne-universite-alicante.jpg', 'assets/etudes/italie-universite-padoue.jpg', 'assets/etudes/tchequie-universite-charles.jpg', 'assets/etudes/bulgarie-universite-sofia.jpg', 'assets/etudes/hongrie-universite-debrecen.jpg', 'assets/etudes/chine-universite-tsinghua.jpg'];
   // Vraies photos de nos étudiants (avec leur accord), dans assets/etudes/nos-etudiants/.
   // La section « Nos étudiants » reste cachée tant que cette liste est vide.
   // Format : ['nom-du-fichier.jpg', 'légende FR', 'légende AR']
@@ -31,24 +31,22 @@
     ['Université de Debrecen', 'Wikimedia Commons', 'CC BY-SA 2.0', 'https://commons.wikimedia.org/wiki/File:University_of_Debrecen_-_Main_building.jpg'],
     ['Université Tsinghua, Pékin', 'Huangdan2060', 'CC0', 'https://commons.wikimedia.org/wiki/File:West_school_gate_of_Tsinghua_University,_2011042202.jpg'],
     ['Rue Iuliu Maniu, Cluj-Napoca', 'DimiTalen', 'CC0', 'https://commons.wikimedia.org/wiki/File:Looking_down_Strada_Iuliu_Maniu_from_Pia%C8%9Ba_Unirii,_Cluj-Napoca,_2017.jpg'],
-    ['USMF Nicolae Testemițanu, Chișinău', 'Photobank MD', 'CC0', 'https://commons.wikimedia.org/wiki/File:Universitatea_de_Stat_de_Medicina_si_Farmacie_N.Testemitanu,_Chisinau,_Republica_Moldova_Nicolae_Testemitanu_State_University_of_Me_(50982661382).jpg']
   ];
 
   var C = {
     fr: {
       langBtn: 'عربي', back: 'Agence de voyage',
       nav: [['Pays', '#pays'], ['Notre offre', '#offre'], ['Étapes', '#etapes'], ['FAQ', '#faq'], ['Diagnostic', '#diagnostic']],
-      h1a: 'Étudier en', h1b: 'en licence ou en master.', rotPays: ['Roumanie', 'Espagne', 'Italie', 'Tchéquie', 'Moldavie', 'Bulgarie', 'Hongrie', 'Chine'],
+      h1a: 'Étudier en', h1b: 'en licence ou en master.', rotPays: ['Roumanie', 'Espagne', 'Italie', 'Tchéquie', 'Bulgarie', 'Hongrie', 'Chine'],
       sub: 'Roumanie, Espagne, Italie, Tchéquie, Chine et plus. Toutes les spécialités, avec une année prépa de langue si besoin. On choisit avec toi le pays et l’université, et on t’accompagne jusqu’au dépôt du visa.',
       btn: 'Diagnostic gratuit', preuve: '+5 000', preuveTxt: 'étudiants accompagnés, sous notre ancien nom Dartina Center.',
       engag: [['Des pays parmi les plus ouverts aux étudiants algériens', 'travel_explore'], ['Universités publiques et accréditées', 'school'], ['Contrat écrit avant tout paiement', 'description'], ['Scolarité payée directement à l’université', 'account_balance']],
-      paysPill: 'Nos destinations', paysH1: 'Huit destinations,', paysH2: 'un seul accompagnement.',
+      paysPill: 'Nos destinations', paysH1: 'Sept destinations,', paysH2: 'un seul accompagnement.',
       pays: [
         { drap: '🇷🇴', rang: 'Europe de l’Est', nom: 'Roumanie', acc: 'Le consulat européen le plus ouvert aux étudiants algériens.', pts: ['Cursus en roumain, en français ou en anglais', 'Année prépa de langue si besoin', 'Diplôme européen'] },
         { drap: '🇪🇸', rang: 'Europe du Sud', nom: 'Espagne', acc: 'Deux consulats en Algérie, et un membre de notre équipe vit en Espagne.', pts: ['Consulats à Alger et à Oran', 'Année de langue espagnole si besoin', 'Diplôme européen'] },
         { drap: '🇮🇹', rang: 'Europe du Sud', nom: 'Italie', acc: 'Des universités publiques prestigieuses, avec des frais selon les revenus de la famille.', pts: ['Inscription par la plateforme Universitaly', 'Nombreux cursus en anglais', 'Bourses nationales et régionales'] },
         { drap: '🇨🇿', rang: 'Europe centrale', nom: 'Tchéquie', acc: 'Les études en tchèque sont gratuites dans les universités publiques.', pts: ['Année prépa de tchèque', 'Cursus en anglais aussi', 'Diplôme européen'] },
-        { drap: '🇲🇩', rang: 'Europe de l’Est', nom: 'Moldavie', acc: 'Des frais parmi les plus bas d’Europe, dans un système proche de la Roumanie.', pts: ['Cursus en anglais ou en roumain', 'Vie étudiante abordable', 'Conditions de visa étudiées au cas par cas'] },
         { drap: '🇧🇬', rang: 'Europe de l’Est', nom: 'Bulgarie', acc: 'Des universités publiques reconnues, avec de nombreux cursus en anglais.', pts: ['Cursus en anglais ou en bulgare', 'Année prépa disponible', 'Diplôme européen'] },
         { drap: '🇭🇺', rang: 'Europe centrale', nom: 'Hongrie', acc: 'Plus de 200 programmes en anglais dans des universités réputées.', pts: ['Cursus en anglais', 'Bourse Stipendium Hungaricum pour les meilleurs dossiers', 'Diplôme européen'] },
         { drap: '🇨🇳', rang: 'Asie', nom: 'Chine', acc: 'Licence et master en anglais ou en chinois, dans de grandes universités.', pts: ['Année prépa de chinois si besoin', 'Visa délivré sur lettre d’admission', 'Bourses de certaines universités'] }
@@ -78,14 +76,14 @@
       contactTxt: 'Réponds à quelques questions. Le bouton ouvre WhatsApp avec ta demande déjà rédigée, et un conseiller te répond.',
       fTitre: 'Diagnostic gratuit', fNom: 'Nom complet', fTel: 'Ton numéro WhatsApp', fNiveau: 'Ton niveau', niveaux: ['Bac en cours', 'Bachelier', 'Licence', 'Master', 'Autre'],
       fMoy: 'Moyenne du bac', fFil: 'Filière souhaitée', filieres: ['Médecine, dentaire, pharmacie', 'Ingénierie', 'Informatique', 'Commerce, gestion', 'Autre', 'Je ne sais pas encore'],
-      fPays: 'Pays souhaité', paysOpt: ['Roumanie', 'Espagne', 'Italie', 'Tchéquie', 'Moldavie', 'Bulgarie', 'Hongrie', 'Chine', 'Je ne sais pas encore'],
+      fPays: 'Pays souhaité', paysOpt: ['Roumanie', 'Espagne', 'Italie', 'Tchéquie', 'Bulgarie', 'Hongrie', 'Chine', 'Je ne sais pas encore'],
       fBudget: 'Budget par an (scolarité et vie)', budgets: ['Moins de 4 000 €', '4 000 à 7 000 €', '7 000 à 10 000 €', 'Plus de 10 000 €'],
       fLangue: 'Langue maîtrisée', langues: ['Français', 'Anglais', 'Français et anglais', 'Aucune des deux'],
       fSend: 'Envoyer sur WhatsApp', fHint: 'Tes informations ne sont envoyées qu’à notre équipe, sur WhatsApp.',
       msgForm: 'Bonjour Massar Study, voici ma demande de diagnostic :', msgGen: 'Bonjour Massar Study, je souhaite des informations sur les études à l’étranger.',
-      defile: ['Roumanie', 'Licence', 'Espagne', 'Master', 'Italie', 'Toutes les spécialités', 'Tchéquie', 'Année prépa', 'Moldavie', 'Bulgarie', 'Hongrie', 'Chine', 'Dossier de visa'],
+      defile: ['Roumanie', 'Licence', 'Espagne', 'Master', 'Italie', 'Toutes les spécialités', 'Tchéquie', 'Année prépa', 'Bulgarie', 'Hongrie', 'Chine', 'Dossier de visa'],
       statsTitre: 'Des chiffres, pas des promesses.',
-      stats: [[5000, '+', '', 'étudiants accompagnés'], [8, '', '', 'destinations en Europe et en Chine'], [18, '', ' %', 'de refus de visa en Roumanie en 2024, le plus bas des consulats européens en Algérie'], [2, '', '', 'cycles d’études : licence et master, toutes les spécialités']],
+      stats: [[5000, '+', '', 'étudiants accompagnés'], [7, '', '', 'destinations en Europe et en Chine'], [18, '', ' %', 'de refus de visa en Roumanie en 2024, le plus bas des consulats européens en Algérie'], [2, '', '', 'cycles d’études : licence et master, toutes les spécialités']],
       servTitre: 'Un seul interlocuteur, de A à Z', servOpt: 'Option',
       services: [
         ['Choix du pays', 'public', 'On compare avec toi les pays selon ton profil, ta filière et ton budget.'],
@@ -103,17 +101,16 @@
     ar: {
       langBtn: 'FR', back: 'وكالة السفر',
       nav: [['الدول', '#pays'], ['عرضنا', '#offre'], ['الخطوات', '#etapes'], ['الأسئلة', '#faq'], ['التقييم', '#diagnostic']],
-      h1a: 'ادرس في', h1b: 'ليسانس أو ماستر.', rotPays: ['رومانيا', 'إسبانيا', 'إيطاليا', 'التشيك', 'مولدوفا', 'بلغاريا', 'المجر', 'الصين'],
+      h1a: 'ادرس في', h1b: 'ليسانس أو ماستر.', rotPays: ['رومانيا', 'إسبانيا', 'إيطاليا', 'التشيك', 'بلغاريا', 'المجر', 'الصين'],
       sub: 'رومانيا، إسبانيا، إيطاليا، التشيك، الصين وغيرها. كل التخصصات، مع سنة تحضيرية للغة عند الحاجة. نختار معك البلد والجامعة ونرافقك حتى إيداع ملف التأشيرة.',
       btn: 'تقييم مجاني', preuve: '+5000', preuveTxt: 'طالب رافقناهم، باسمنا السابق Dartina Center.',
       engag: [['دول من الأكثر انفتاحاً على الطلبة الجزائريين', 'travel_explore'], ['جامعات حكومية ومعتمدة', 'school'], ['عقد مكتوب قبل أي دفع', 'description'], ['رسوم الدراسة تُدفع مباشرة للجامعة', 'account_balance']],
-      paysPill: 'وجهاتنا', paysH1: 'ثماني وجهات،', paysH2: 'ومرافقة واحدة.',
+      paysPill: 'وجهاتنا', paysH1: 'سبع وجهات،', paysH2: 'ومرافقة واحدة.',
       pays: [
         { drap: '🇷🇴', rang: 'أوروبا الشرقية', nom: 'رومانيا', acc: 'القنصلية الأوروبية الأكثر انفتاحاً على الطلبة الجزائريين.', pts: ['الدراسة بالرومانية أو الفرنسية أو الإنجليزية', 'سنة تحضيرية للغة عند الحاجة', 'شهادة أوروبية'] },
         { drap: '🇪🇸', rang: 'جنوب أوروبا', nom: 'إسبانيا', acc: 'قنصليتان في الجزائر، وأحد أعضاء فريقنا يقيم في إسبانيا.', pts: ['قنصليتان في الجزائر العاصمة ووهران', 'سنة لتعلم الإسبانية عند الحاجة', 'شهادة أوروبية'] },
         { drap: '🇮🇹', rang: 'جنوب أوروبا', nom: 'إيطاليا', acc: 'جامعات حكومية عريقة، برسوم حسب دخل العائلة.', pts: ['التسجيل عبر منصة Universitaly', 'برامج كثيرة بالإنجليزية', 'منح وطنية وجهوية'] },
         { drap: '🇨🇿', rang: 'أوروبا الوسطى', nom: 'التشيك', acc: 'الدراسة بالتشيكية مجانية في الجامعات الحكومية.', pts: ['سنة تحضيرية للتشيكية', 'برامج بالإنجليزية أيضاً', 'شهادة أوروبية'] },
-        { drap: '🇲🇩', rang: 'أوروبا الشرقية', nom: 'مولدوفا', acc: 'من أقل الرسوم في أوروبا، في نظام قريب من رومانيا.', pts: ['الدراسة بالإنجليزية أو بالرومانية', 'معيشة طلابية في المتناول', 'شروط التأشيرة تُدرس حالة بحالة'] },
         { drap: '🇧🇬', rang: 'أوروبا الشرقية', nom: 'بلغاريا', acc: 'جامعات حكومية معترف بها، مع برامج كثيرة بالإنجليزية.', pts: ['الدراسة بالإنجليزية أو بالبلغارية', 'سنة تحضيرية متوفرة', 'شهادة أوروبية'] },
         { drap: '🇭🇺', rang: 'أوروبا الوسطى', nom: 'المجر', acc: 'أكثر من 200 برنامج بالإنجليزية في جامعات مرموقة.', pts: ['الدراسة بالإنجليزية', 'منحة Stipendium Hungaricum لأفضل الملفات', 'شهادة أوروبية'] },
         { drap: '🇨🇳', rang: 'آسيا', nom: 'الصين', acc: 'ليسانس وماستر بالإنجليزية أو بالصينية، في جامعات كبرى.', pts: ['سنة تحضيرية للصينية عند الحاجة', 'تأشيرة تُمنح برسالة القبول', 'منح من بعض الجامعات'] }
@@ -143,14 +140,14 @@
       contactTxt: 'أجب عن بعض الأسئلة. يفتح الزر واتساب مع طلبك جاهزاً، ويرد عليك مستشار.',
       fTitre: 'تقييم مجاني', fNom: 'الاسم الكامل', fTel: 'رقم واتساب', fNiveau: 'مستواك', niveaux: ['أدرس للباكالوريا', 'حاصل على الباكالوريا', 'ليسانس', 'ماستر', 'آخر'],
       fMoy: 'معدل الباكالوريا', fFil: 'التخصص المطلوب', filieres: ['الطب، طب الأسنان، الصيدلة', 'الهندسة', 'الإعلام الآلي', 'التجارة والتسيير', 'آخر', 'لم أقرر بعد'],
-      fPays: 'البلد المطلوب', paysOpt: ['رومانيا', 'إسبانيا', 'إيطاليا', 'التشيك', 'مولدوفا', 'بلغاريا', 'المجر', 'الصين', 'لم أقرر بعد'],
+      fPays: 'البلد المطلوب', paysOpt: ['رومانيا', 'إسبانيا', 'إيطاليا', 'التشيك', 'بلغاريا', 'المجر', 'الصين', 'لم أقرر بعد'],
       fBudget: 'الميزانية السنوية (الدراسة والمعيشة)', budgets: ['أقل من 4000 يورو', '4000 إلى 7000 يورو', '7000 إلى 10000 يورو', 'أكثر من 10000 يورو'],
       fLangue: 'اللغة التي تتقنها', langues: ['الفرنسية', 'الإنجليزية', 'الفرنسية والإنجليزية', 'لا هذه ولا تلك'],
       fSend: 'أرسل عبر واتساب', fHint: 'معلوماتك تُرسل فقط لفريقنا عبر واتساب.',
       msgForm: 'السلام عليكم Massar Study، هذا طلب التقييم:', msgGen: 'السلام عليكم Massar Study، أرغب في معلومات حول الدراسة في الخارج.',
-      defile: ['رومانيا', 'ليسانس', 'إسبانيا', 'ماستر', 'إيطاليا', 'كل التخصصات', 'التشيك', 'سنة تحضيرية', 'مولدوفا', 'بلغاريا', 'المجر', 'الصين', 'ملف التأشيرة'],
+      defile: ['رومانيا', 'ليسانس', 'إسبانيا', 'ماستر', 'إيطاليا', 'كل التخصصات', 'التشيك', 'سنة تحضيرية', 'بلغاريا', 'المجر', 'الصين', 'ملف التأشيرة'],
       statsTitre: 'أرقام، لا وعود.',
-      stats: [[5000, '+', '', 'طالب رافقناهم'], [8, '', '', 'وجهات في أوروبا والصين'], [18, '', '%', 'نسبة رفض التأشيرة لرومانيا سنة 2024، الأدنى بين القنصليات الأوروبية في الجزائر'], [2, '', '', 'مستويات: ليسانس وماستر، كل التخصصات']],
+      stats: [[5000, '+', '', 'طالب رافقناهم'], [7, '', '', 'وجهات في أوروبا والصين'], [18, '', '%', 'نسبة رفض التأشيرة لرومانيا سنة 2024، الأدنى بين القنصليات الأوروبية في الجزائر'], [2, '', '', 'مستويات: ليسانس وماستر، كل التخصصات']],
       servTitre: 'محاور واحد، من الألف إلى الياء', servOpt: 'اختياري',
       services: [
         ['اختيار البلد', 'public', 'نقارن معك الدول حسب ملفك وتخصصك وميزانيتك.'],
