@@ -25,6 +25,18 @@ Pour une nouvelle affiche : la mettre dans `assets/offres/` (format .jpg ou .web
 
 Les textes fixes de l'interface (menus, titres, étapes) sont dans `app.js`, en haut du fichier.
 
+## Page Études (Massar Study)
+
+`etudes.html` est la page du pôle études (lien « Études » dans le menu du site, et lien à mettre dans la bio de @massar.study). Tout son contenu, en français et en arabe, est dans **`etudes.js`**, objet `C` en haut du fichier. Son style complète `styles.css` dans `etudes.css`.
+
+- Les frais de l'agence ne sont **jamais affichés** : ils sont expliqués à l'agence, avant la signature du contrat
+- Ne jamais écrire « visa garanti »
+- Les frais de scolarité des universités sont indicatifs : les revérifier chaque année
+- Le formulaire de diagnostic envoie la demande sur WhatsApp au +213 559 92 37 09
+- Animations dans `etudes-anim.js` : GSAP 3.13 (gratuit, y compris en commercial), ScrollTrigger, SplitText et défilement fluide Lenis, chargés depuis cdn.jsdelivr.net. Elles se coupent automatiquement si le téléphone demande de réduire les animations. Les chiffres animés et les textes des bandes défilantes sont dans `etudes.js` (`stats`, `defile`, `orbChips`)
+- Photos dans `assets/etudes/` : libres de droits (Wikimedia Commons). Les crédits en bas de page sont **obligatoires**, ne pas les retirer. Pour changer une photo, remplacer le fichier et mettre à jour `HERO`, `PHOTOS_PAYS` et `CREDITS` en haut de `etudes.js`
+- Galerie « Nos étudiants » : 6 photos de nos arrivées 2020-2021 (Instagram @massar.study), dans `assets/etudes/nos-etudiants/`, liste `NOS_PHOTOS` dans `etudes.js`. Les étudiants reconnaissables doivent avoir donné leur accord
+
 ## À faire avant la mise en ligne
 
 - [ ] **Remplacer les 4 avis temporaires** dans `AVIS` : ils viennent de la fiche Google de Riwaya Travel, pas de Massar Algiers. Ne pas publier le site avec

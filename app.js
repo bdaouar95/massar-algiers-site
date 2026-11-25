@@ -9,7 +9,7 @@
   var T = {
     fr: {
       langBtn: 'عربي', tel: '0660 44 71 67', call: 'Appeler',
-      nav: [['Offres', '#offres'], ['Omra', '#omra'], ['Billetterie', '#services'], ['Réserver', '#reserver'], ['Contact', '#contact']],
+      nav: [['Offres', '#offres'], ['Omra', '#omra'], ['Études', 'etudes.html'], ['Billetterie', '#services'], ['Réserver', '#reserver'], ['Contact', '#contact']],
       pill: 'Voyages · Billetterie · Services', h1a: 'Votre prochaine escapade,', h1b: 'organisée de A à Z',
       heroLead: 'Agence de voyage à Fouka, Tipaza', heroSub: 'Voyages organisés, Omra, billets d’avion et de bateau, visas. Réservation directe par WhatsApp ou téléphone.',
       btnOffers: 'Voir nos offres',
@@ -33,7 +33,7 @@
     },
     ar: {
       langBtn: 'FR', tel: '0660 44 71 67', call: 'اتصل',
-      nav: [['العروض', '#offres'], ['العمرة', '#omra'], ['التذاكر', '#services'], ['الحجز', '#reserver'], ['اتصل بنا', '#contact']],
+      nav: [['العروض', '#offres'], ['العمرة', '#omra'], ['الدراسة', 'etudes.html?lang=ar'], ['التذاكر', '#services'], ['الحجز', '#reserver'], ['اتصل بنا', '#contact']],
       pill: 'رحلات · تذاكر · خدمات', h1a: 'وجهتك القادمة،', h1b: 'منظمة من الألف إلى الياء',
       heroLead: 'وكالة سفر في فوكة، تيبازة', heroSub: 'رحلات منظمة، عمرة، تذاكر طيران وبحر، تأشيرات. الحجز مباشرة عبر واتساب أو الهاتف.',
       btnOffers: 'اكتشف عروضنا',
