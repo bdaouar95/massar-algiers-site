@@ -39,7 +39,6 @@ Les textes fixes de l'interface (menus, titres, étapes) sont dans `app.js`, en 
 
 ## À faire avant la mise en ligne
 
-- [ ] **Remplacer les 4 avis temporaires** dans `AVIS` : ils viennent de la fiche Google de Riwaya Travel, pas de Massar Algiers. Ne pas publier le site avec
 - [ ] **Istanbul** : « Prochain départ : 25 octobre » sera dépassé après le 25/10, mettre la date suivante
 - [ ] Remplacer les photos basse résolution de `assets/photos/` (visa Espagne, visa Chine, salons Italie) par les originaux
 

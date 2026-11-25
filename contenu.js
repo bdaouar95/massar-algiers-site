@@ -114,14 +114,10 @@ window.MASSAR = {
   // Tant que la liste est vide, la section « Avis clients » est masquée.
   // Modèle :
   // { nom: 'Prénom Nom', moisAgo: 2, voyage: 'Istanbul 2026', texte: 'Texte de l’avis…' },
-  // ⚠️ TEMPORAIRE : ces 4 avis viennent de la fiche Google d'une autre agence (Riwaya Travel).
-  // À REMPLACER par de vrais avis Massar Algiers AVANT toute mise en ligne.
-  AVIS: [
-    { nom: 'Ferry Aile', moisAgo: 9, texte: 'Nous avons passé un séjour exceptionnel. 2 jours à Alger, 1 journée à Tipaza et trek de 5 jours à Sefar dans le Tassili N’ajjer. Tout a été parfait, de la première jusqu’à la dernière seconde…' },
-    { nom: 'Marius Berdi', moisAgo: 9, texte: 'Cela fait presque un an que je suis partie dans le Hoggar, et les mots me manquent encore pour décrire à quel point cette expérience fut unique et marquante. …' },
-    { nom: 'Kalia Tayeb', moisAgo: 9, voyage: 'TADRART Rouge - Djanet 28 Déc', texte: 'Le voyage s’est parfaitement déroulé du début à la fin. Service au-dessus de tout, accueil et prise en charge excellents. …' },
-    { nom: 'Jean-Christophe Clement', moisAgo: 7, texte: 'This was a very comprehensive tour of Algier. While much more expensive than doing your own self-tour, if you only have a day or two in Algier, it is the better option to avoid getting lost in the casbah…' }
-  ],
+  // Avis de vrais clients de Massar Algiers (Google, Facebook, WhatsApp), avec leur accord.
+  // La section « Avis clients » reste cachée tant que cette liste est vide.
+  // Format : { nom: 'Prénom N.', moisAgo: 2, voyage: 'Omra mars 2026', texte: '...' }
+  AVIS: [],
 
   // ─── Liens ───────────────────────────────────────────────────────────
   facebook: 'https://www.facebook.com/profile.php?id=61565476725472',
