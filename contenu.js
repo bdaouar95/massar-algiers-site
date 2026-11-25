@@ -116,8 +116,17 @@ window.MASSAR = {
   // { nom: 'Prénom Nom', moisAgo: 2, voyage: 'Istanbul 2026', texte: 'Texte de l’avis…' },
   // Avis de vrais clients de Massar Algiers (Google, Facebook, WhatsApp), avec leur accord.
   // La section « Avis clients » reste cachée tant que cette liste est vide.
-  // Format : { nom: 'Prénom N.', moisAgo: 2, voyage: 'Omra mars 2026', texte: '...' }
-  AVIS: [],
+  // Format : { nom: 'Prénom N.', source: 'Facebook', voyage: 'Omra mars 2026', texte: '...' } (avis réels uniquement, textes non modifiés sur le fond)
+  AVIS: [
+    { nom: 'Djamel A.', source: 'Facebook', voyage: 'Traversée France ⇄ Algérie', texte: 'Vraiment c’est les meilleurs pour les réservations des traversées France Algérie, surtout on peut payer en dinars. Rien à dire, surtout la dame de l’agence, elle est très professionnelle.' },
+    { nom: 'Hichem D.', source: 'Facebook', texte: 'Excellent service du début à la fin. L’agence a été très professionnelle.' },
+    { nom: 'Pep W.', source: 'Facebook', texte: 'الصراحة والله على ما نقول شهيد، اتعاملت معاهم وكانو مهنيين والمستوى، خاصة من ناحية الثقة: نخلص عن طريق البريد والحجز يلحقني للهاتف. شكرا وبالتوفيق' },
+    { nom: 'Do F.', source: 'Facebook', texte: 'Un grand merci à la dame de l’agence de voyage, et aussi à l’équipe de l’agence, dont j’ai beaucoup apprécié la présence rassurante, l’aide et l’écoute ! Merci.' },
+    { nom: 'Nacer L.', source: 'Facebook', texte: 'صراحة يعطوكم معلومات واسعة والإجابة السريعة وفي وقتها، شكرا لكم' },
+    { nom: 'Ribouh R.', source: 'Facebook', texte: 'Rapide et efficace, très bon accueil. Sincèrement, merci beaucoup.' },
+    { nom: 'Oum Amir', source: 'Facebook', texte: 'Machallah, je recommande cette agence, c’est les meilleurs.' },
+    { nom: 'Samir S.', source: 'Facebook', texte: 'أحسن وكالة في الجزائر، ربي يحفظكم' }
+  ],
 
   // ─── Liens ───────────────────────────────────────────────────────────
   facebook: 'https://www.facebook.com/profile.php?id=61565476725472',

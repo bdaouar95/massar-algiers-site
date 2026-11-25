@@ -243,7 +243,7 @@
         '<div class="avis-grid">' + map(avis, function (a) {
           return '<div class="avis-card"><div class="avis-who"><span class="rond">' + esc(a.nom.charAt(0)) + '</span><div><b>' + esc(a.nom) + '</b>' +
             (a.moisAgo ? '<small>' + t.ago(a.moisAgo) + '</small>' : '') + '</div></div>' +
-            '<div class="avis-tags"><span>' + t.rating + ' ★</span>' + (a.voyage ? '<span>' + esc(a.voyage) + '</span>' : '') + '</div>' +
+            '<div class="avis-tags"><span>' + esc(a.source || 'Facebook') + '</span>' + (a.voyage ? '<span>' + esc(a.voyage) + '</span>' : '') + '</div>' +
             '<div class="avis-txt" dir="auto">' + esc(a.texte) + '</div></div>';
         }) + '</div>' +
       '</section>' : '') +
