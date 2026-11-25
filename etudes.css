@@ -250,3 +250,12 @@ html[dir="rtl"] .e-sticky { padding: 0 16px 0 22px; }
 
 @keyframes e-flash { 0% { box-shadow: 0 0 0 0 rgba(246,185,26,.9); } 70% { box-shadow: 0 0 0 18px rgba(246,185,26,0); } 100% { box-shadow: 0 0 0 0 rgba(246,185,26,0); } }
 .form.e-flash { animation: e-flash 1.2s ease-out 2 .6s; }
+
+/* ─── Plan B hors Schengen ─── */
+.e-planb { padding: var(--pad-y) var(--pad-x); display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 56px); align-items: center;
+  background: linear-gradient(135deg, #FFF8E6 0%, #fff 55%); border: 2px solid rgba(246,185,26,.45); }
+.e-planb-txt { display: flex; flex-direction: column; gap: 18px; align-items: flex-start; }
+.e-planb-txt p { font-size: 16px; line-height: 1.65; color: var(--texte-2); max-width: 560px; }
+.e-planb-cartes { display: grid; gap: 14px; }
+.e-planb .pays { background: #fff; box-shadow: 0 18px 40px -24px rgba(11,34,54,.35); }
+@media (max-width: 860px) { .e-planb { grid-template-columns: 1fr; } }

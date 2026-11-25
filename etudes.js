@@ -21,7 +21,9 @@
     ['etudiants-5.jpg', 'Premier jour d’une nouvelle vie', 'اليوم الأول في حياة جديدة'],
     ['etudiants-6.jpg', 'Notre futur pilote', 'طيارنا المستقبلي']
   ];
+  var PHOTOS_PLANB = ['assets/etudes/serbie-universite-belgrade.jpg'];
   var CREDITS = [
+    ['Rectorat de l’Université de Belgrade', 'Matija', 'CC BY-SA 3.0', 'https://commons.wikimedia.org/wiki/File:Rektorat_Beogradskog_univerziteta.jpg'],
     ['Étudiants de l’Université Babeș-Bolyai, Cluj', 'MagdaBarascu', 'CC BY-SA 4.0', 'https://commons.wikimedia.org/wiki/File:Students_of_Babe%C8%99-Bolyai_University.jpg'],
     ['UMF Iași', 'UMF Iasi', 'CC BY-SA 4.0', 'https://commons.wikimedia.org/wiki/File:UMF_Ia%C8%99i.jpg'],
     ['Université Charles, Prague', 'Slyronit', 'CC BY-SA 4.0', 'https://commons.wikimedia.org/wiki/File:Charles_University,_Prague.jpg'],
@@ -52,6 +54,11 @@
         { drap: '🇨🇳', rang: 'Asie', nom: 'Chine', acc: 'Licence et master en anglais ou en chinois, dans de grandes universités.', pts: ['Année prépa de chinois si besoin', 'Visa délivré sur lettre d’admission', 'Bourses de certaines universités'] }
       ],
       paysCta: 'Je veux étudier ici',
+      pbPill: 'Plan B', pbH1: 'Visa Schengen refusé&nbsp;?', pbH2: 'Ton projet continue.',
+      pbTxt: 'Si l’Europe Schengen ne marche pas pour toi, on a une solution de repli : des pays hors Schengen, avec un visa déposé à Alger et une année prépa sans diplôme d’anglais. Tu ne perds pas ton année.',
+      planB: [
+        { drap: '🇷🇸', rang: 'Europe hors Schengen', nom: 'Serbie', acc: 'Le visa étudiant se dépose à l’ambassade de Serbie à Alger.', pts: ['Année prépa de serbe, sans diplôme d’anglais', 'Des frais parmi les plus bas d’Europe', 'Travail autorisé 20 h par semaine'] }
+      ],
       paysPlus: 'Licence et master, toutes les spécialités : le pays se choisit selon ton profil, ta langue et ton budget.',
       source: 'Les frais de scolarité dépendent de l’université et du programme. Ils sont confirmés par écrit avec chaque université avant toute inscription, et payés directement sur son compte.',
       offrePill: 'Notre accompagnement', offreH1: 'De ton inscription', offreH2: 'à ton arrivée sur place.',
@@ -77,7 +84,7 @@
       contactTxt: 'Réponds à quelques questions. Le bouton ouvre WhatsApp avec ta demande déjà rédigée, et un conseiller te répond.',
       fTitre: 'Diagnostic gratuit', fNom: 'Nom complet', fTel: 'Ton numéro WhatsApp', fNiveau: 'Ton niveau', niveaux: ['Bac en cours', 'Bachelier', 'Licence', 'Master', 'Autre'],
       fMoy: 'Moyenne du bac', fFil: 'Filière souhaitée', filieres: ['Médecine, dentaire, pharmacie', 'Ingénierie', 'Informatique', 'Commerce, gestion', 'Autre', 'Je ne sais pas encore'],
-      fPays: 'Pays souhaité', paysOpt: ['Roumanie', 'Espagne', 'Italie', 'Tchéquie', 'Bulgarie', 'Hongrie', 'Chine', 'Je ne sais pas encore'],
+      fPays: 'Pays souhaité', paysOpt: ['Roumanie', 'Espagne', 'Italie', 'Tchéquie', 'Bulgarie', 'Hongrie', 'Chine', 'Serbie', 'Je ne sais pas encore'],
       fBudget: 'Budget par an (scolarité et vie)', budgets: ['Moins de 4 000 €', '4 000 à 7 000 €', '7 000 à 10 000 €', 'Plus de 10 000 €'],
       fLangue: 'Langue maîtrisée', langues: ['Français', 'Anglais', 'Français et anglais', 'Aucune des deux'],
       fSend: 'Envoyer sur WhatsApp', fHint: 'Tes informations ne sont envoyées qu’à notre équipe, sur WhatsApp.',
@@ -117,6 +124,11 @@
         { drap: '🇨🇳', rang: 'آسيا', nom: 'الصين', acc: 'ليسانس وماستر بالإنجليزية أو بالصينية، في جامعات كبرى.', pts: ['سنة تحضيرية للصينية عند الحاجة', 'تأشيرة تُمنح برسالة القبول', 'منح من بعض الجامعات'] }
       ],
       paysCta: 'أريد الدراسة هنا',
+      pbPill: 'الخطة البديلة', pbH1: 'رُفضت تأشيرة شنغن؟', pbH2: 'مشروعك يستمر.',
+      pbTxt: 'إذا لم تنجح أوروبا شنغن معك، لدينا حل بديل: دول خارج شنغن، بتأشيرة تُودع في الجزائر وسنة تحضيرية دون شهادة إنجليزية. لن تضيع سنتك.',
+      planB: [
+        { drap: '🇷🇸', rang: 'أوروبا خارج شنغن', nom: 'صربيا', acc: 'تأشيرة الدراسة تُودع في سفارة صربيا بالجزائر.', pts: ['سنة تحضيرية للصربية دون شهادة إنجليزية', 'من أقل الرسوم في أوروبا', 'العمل مسموح 20 ساعة أسبوعياً'] }
+      ],
       paysPlus: 'ليسانس وماستر، كل التخصصات: يُختار البلد حسب ملفك ولغتك وميزانيتك.',
       source: 'رسوم الدراسة تختلف حسب الجامعة والبرنامج. نؤكدها كتابياً مع كل جامعة قبل التسجيل، وتُدفع مباشرة في حسابها.',
       offrePill: 'مرافقتنا', offreH1: 'من تسجيلك', offreH2: 'إلى وصولك.',
@@ -142,7 +154,7 @@
       contactTxt: 'أجب عن بعض الأسئلة. يفتح الزر واتساب مع طلبك جاهزاً، ويرد عليك مستشار.',
       fTitre: 'تقييم مجاني', fNom: 'الاسم الكامل', fTel: 'رقم واتساب', fNiveau: 'مستواك', niveaux: ['أدرس للباكالوريا', 'حاصل على الباكالوريا', 'ليسانس', 'ماستر', 'آخر'],
       fMoy: 'معدل الباكالوريا', fFil: 'التخصص المطلوب', filieres: ['الطب، طب الأسنان، الصيدلة', 'الهندسة', 'الإعلام الآلي', 'التجارة والتسيير', 'آخر', 'لم أقرر بعد'],
-      fPays: 'البلد المطلوب', paysOpt: ['رومانيا', 'إسبانيا', 'إيطاليا', 'التشيك', 'بلغاريا', 'المجر', 'الصين', 'لم أقرر بعد'],
+      fPays: 'البلد المطلوب', paysOpt: ['رومانيا', 'إسبانيا', 'إيطاليا', 'التشيك', 'بلغاريا', 'المجر', 'الصين', 'صربيا', 'لم أقرر بعد'],
       fBudget: 'الميزانية السنوية (الدراسة والمعيشة)', budgets: ['أقل من 4000 يورو', '4000 إلى 7000 يورو', '7000 إلى 10000 يورو', 'أكثر من 10000 يورو'],
       fLangue: 'اللغة التي تتقنها', langues: ['الفرنسية', 'الإنجليزية', 'الفرنسية والإنجليزية', 'لا هذه ولا تلك'],
       fSend: 'أرسل عبر واتساب', fHint: 'معلوماتك تُرسل فقط لفريقنا عبر واتساب.',
@@ -195,6 +207,16 @@
   }
   var lang = initialLang();
 
+  function carteHtml(p, photo, t, rtl) {
+    return '<article class="pays">' +
+            '<div class="pays-img"><img class="cover" src="' + photo + '" alt="' + esc(p.nom) + '" loading="lazy" decoding="async"></div>' +
+            '<div class="pays-top"><span class="pays-rang">' + esc(p.rang) + '</span><span class="pays-drap" aria-hidden="true">' + p.drap + '</span></div>' +
+            '<h3>' + esc(p.nom) + '</h3><p class="pays-accroche">' + esc(p.acc) + '</p>' +
+            '<ul>' + map(p.pts, function (x) { return '<li>' + ic('check_circle') + '<span>' + esc(x) + '</span></li>'; }) + '</ul>' +
+            '<a class="pays-cta" href="#diagnostic" data-pays="' + esc(p.nom) + '">' + esc(t.paysCta) + ic(rtl ? 'arrow_back' : 'arrow_forward') + '</a>' +
+          '</article>';
+  }
+
   function render() {
     var t = C[lang], rtl = lang === 'ar';
     var waGen = wa(t.msgGen);
@@ -243,16 +265,14 @@
       // Pays
       '<section id="pays" class="card e-pays">' +
         pill(t.paysPill) + h2(t.paysH1, t.paysH2, 'center') +
-        '<div class="e-pays-grid">' + map(t.pays, function (p, i) {
-          return '<article class="pays">' +
-            '<div class="pays-img"><img class="cover" src="' + PHOTOS_PAYS[i] + '" alt="' + esc(p.nom) + '" loading="lazy" decoding="async"></div>' +
-            '<div class="pays-top"><span class="pays-rang">' + esc(p.rang) + '</span><span class="pays-drap" aria-hidden="true">' + p.drap + '</span></div>' +
-            '<h3>' + esc(p.nom) + '</h3><p class="pays-accroche">' + esc(p.acc) + '</p>' +
-            '<ul>' + map(p.pts, function (x) { return '<li>' + ic('check_circle') + '<span>' + esc(x) + '</span></li>'; }) + '</ul>' +
-            '<a class="pays-cta" href="#diagnostic" data-pays="' + esc(p.nom) + '">' + esc(t.paysCta) + ic(rtl ? 'arrow_back' : 'arrow_forward') + '</a>' +
-          '</article>';
-        }) + '</div>' +
+        '<div class="e-pays-grid">' + map(t.pays, function (p, i) { return carteHtml(p, PHOTOS_PAYS[i], t, rtl); }) + '</div>' +
         '<p class="e-source"><b>' + esc(t.paysPlus) + '</b><br>' + esc(t.source) + '</p>' +
+      '</section>' +
+
+      // Plan B hors Schengen
+      '<section id="plan-b" class="card e-planb">' +
+        '<div class="e-planb-txt">' + pill(t.pbPill) + h2(t.pbH1, t.pbH2) + '<p>' + esc(t.pbTxt) + '</p></div>' +
+        '<div class="e-planb-cartes">' + map(t.planB, function (p, i) { return carteHtml(p, PHOTOS_PLANB[i], t, rtl); }) + '</div>' +
       '</section>' +
 
       // Offre
