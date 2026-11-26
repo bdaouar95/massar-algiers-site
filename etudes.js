@@ -38,10 +38,10 @@
   var C = {
     fr: {
       langBtn: 'عربي', back: 'Agence de voyage',
-      nav: [['Pays', '#pays'], ['Notre offre', '#offre'], ['Étapes', '#etapes'], ['FAQ', '#faq'], ['Diagnostic', '#diagnostic']],
+      nav: [['Pays', '#pays'], ['Notre offre', '#offre'], ['Étapes', '#etapes'], ['FAQ', '#faq'], ['Consultation', '#diagnostic']],
       h1a: 'Étudier en', h1b: 'en licence ou en master.', rotPays: ['Roumanie', 'Espagne', 'Italie', 'Tchéquie', 'Bulgarie', 'Hongrie', 'Chine'],
       sub: 'Roumanie, Espagne, Italie, Tchéquie, Chine et plus. Toutes les spécialités, avec une année prépa de langue si besoin. On choisit avec toi le pays et l’université, et on t’accompagne jusqu’au dépôt du visa.',
-      btn: 'Diagnostic gratuit', preuve: '+5 000', preuveTxt: 'étudiants accompagnés, sous notre ancien nom Dartina Center.',
+      btn: 'Commencer mon projet', preuve: '+5 000', preuveTxt: 'étudiants accompagnés, sous notre ancien nom Dartina Center.',
       engag: [['Des pays parmi les plus ouverts aux étudiants algériens', 'travel_explore'], ['Universités publiques et accréditées', 'school'], ['Contrat écrit avant tout paiement', 'description'], ['Scolarité payée directement à l’université', 'account_balance']],
       paysPill: 'Nos destinations', paysH1: 'Sept destinations,', paysH2: 'un seul accompagnement.',
       pays: [
@@ -64,31 +64,31 @@
       offrePill: 'Notre accompagnement', offreH1: 'De ton inscription', offreH2: 'à ton arrivée sur place.',
       packTag: 'Admission et visa', packNom: 'Pack Admission',
       packPts: ['Choix du pays, de l’université et du programme selon ton profil', 'Montage et dépôt du dossier d’admission', 'Suivi jusqu’à la lettre d’acceptation', 'Préparation du dossier de visa et accompagnement jusqu’au dépôt'],
-      packGar: 'Devis personnalisé après le diagnostic gratuit, détaillé et signé à l’agence avant tout paiement.',
+      packGar: 'Devis personnalisé après la consultation gratuite, détaillé et signé à l’agence avant tout paiement.',
       optTag: 'En option', optNom: 'Prise en charge totale à l’arrivée',
       optPts: ['Accueil à l’aéroport à ton arrivée', 'Carte SIM et premiers jours sur place', 'Aide à l’installation et aux démarches', 'Accompagnement de A à Z pendant ton installation'],
       hors: 'Non compris :', horsList: ['frais de scolarité', 'frais du consulat', 'billet d’avion', 'logement', 'assurance'],
       etapesTitre: 'Comment ça marche', why: ['Pays bien choisis', 'Contrat écrit', 'Universités vérifiées', 'Suivi jusqu’au départ'],
       etapesLead: '5 étapes', etapesSub: 'Tout se fait avec notre équipe, par WhatsApp ou au bureau. Aucun paiement en ligne.',
-      etapes: [['Diagnostic gratuit', 'Tu remplis le formulaire. Un conseiller te rappelle avec les pays et le budget qui te correspondent.'], ['Choix de l’université', 'On compare ensemble les options et on signe un contrat écrit.'], ['Admission', 'On monte et on dépose ton dossier, jusqu’à la lettre d’acceptation.'], ['Visa', 'Tu paies la scolarité à l’université, puis on prépare ton dossier de visa.'], ['Départ', 'Tu pars seul, ou avec la prise en charge totale à l’arrivée.']],
+      etapes: [['Consultation gratuite', 'Tu remplis le formulaire. Un conseiller te rappelle avec les pays et le budget qui te correspondent.'], ['Choix de l’université', 'On compare ensemble les options et on signe un contrat écrit.'], ['Admission', 'On monte et on dépose ton dossier, jusqu’à la lettre d’acceptation.'], ['Visa', 'Tu paies la scolarité à l’université, puis on prépare ton dossier de visa.'], ['Départ', 'Tu pars seul, ou avec la prise en charge totale à l’arrivée.']],
       faqH1: 'Vos questions,', faqH2: 'nos réponses franches.',
       faq: [
         ['Pourquoi ces pays ?', 'Parce qu’ils font partie des pays européens les plus ouverts aux étudiants algériens. La Roumanie, par exemple, a le taux de refus le plus bas des consulats européens en Algérie : 18 % des visas Schengen refusés en 2024, contre 34 % en moyenne (Commission européenne). Nous y travaillons avec des universités publiques, et nous montons chaque dossier avec soin pour mettre toutes les chances de ton côté.'],
-        ['Combien coûte une année au total ?', 'Il faut additionner les frais de scolarité (payés à l’université), le logement, la vie sur place, l’assurance, le visa et le billet. On te donne une estimation complète et écrite pour le pays choisi, avec notre devis, après le diagnostic gratuit.'],
+        ['Combien coûte une année au total ?', 'Il faut additionner les frais de scolarité (payés à l’université), le logement, la vie sur place, l’assurance, le visa et le billet. On te donne une estimation complète et écrite pour le pays choisi, avec notre devis, après la consultation gratuite.'],
         ['Je ne parle pas la langue du pays, c’est possible ?', 'Oui. Beaucoup de programmes sont en anglais, certains en français. Sinon, l’année prépa permet d’apprendre la langue pendant un an avant la licence ou le master.'],
         ['Mon diplôme sera-t-il reconnu en Algérie ?', 'Nous ne proposons que des universités publiques ou accréditées. Avant ton inscription, nous vérifions avec toi la procédure d’équivalence auprès du ministère de l’Enseignement supérieur (MESRS), et du ministère de la Santé pour la médecine.'],
         ['Qui encaisse les frais de scolarité ?', 'L’université, directement, sur un compte à son nom. L’agence n’encaisse jamais tes frais de scolarité.'],
         ['Quand faut-il commencer ?', 'Le plus tôt possible. En Roumanie, les dossiers se déposent dès mars et certaines places sont limitées par pays. Pour une rentrée en septembre, il faut commencer en début d’année.']
       ],
-      contactH1: 'Prêt à partir ?', contactH2: 'Fais ton diagnostic gratuit.',
+      contactH1: 'Prêt à partir ?', contactH2: 'Commence par une consultation gratuite.',
       contactTxt: 'Réponds à quelques questions. Le bouton ouvre WhatsApp avec ta demande déjà rédigée, et un conseiller te répond.',
-      fTitre: 'Diagnostic gratuit', fNom: 'Nom complet', fTel: 'Ton numéro WhatsApp', fNiveau: 'Ton niveau', niveaux: ['Bac en cours', 'Bachelier', 'Licence', 'Master', 'Autre'],
+      fTitre: 'Consultation gratuite', fNom: 'Nom complet', fTel: 'Ton numéro WhatsApp', fNiveau: 'Ton niveau', niveaux: ['Bac en cours', 'Bachelier', 'Licence', 'Master', 'Autre'],
       fMoy: 'Moyenne du bac', fFil: 'Filière souhaitée', filieres: ['Médecine, dentaire, pharmacie', 'Ingénierie', 'Informatique', 'Commerce, gestion', 'Autre', 'Je ne sais pas encore'],
       fPays: 'Pays souhaité', paysOpt: ['Roumanie', 'Espagne', 'Italie', 'Tchéquie', 'Bulgarie', 'Hongrie', 'Chine', 'Serbie', 'Je ne sais pas encore'],
       fBudget: 'Budget par an (scolarité et vie)', budgets: ['Moins de 4 000 €', '4 000 à 7 000 €', '7 000 à 10 000 €', 'Plus de 10 000 €'],
       fLangue: 'Langue maîtrisée', langues: ['Français', 'Anglais', 'Français et anglais', 'Aucune des deux'],
       fSend: 'Envoyer sur WhatsApp', fHint: 'Tes informations ne sont envoyées qu’à notre équipe, sur WhatsApp.',
-      msgForm: 'Bonjour Massar Study, voici ma demande de diagnostic :', msgGen: 'Bonjour Massar Study, je souhaite des informations sur les études à l’étranger.',
+      msgForm: 'Bonjour Massar Study, voici ma demande de consultation :', msgGen: 'Bonjour Massar Study, je souhaite des informations sur les études à l’étranger.',
       defile: ['Roumanie', 'Licence', 'Espagne', 'Master', 'Italie', 'Toutes les spécialités', 'Tchéquie', 'Année prépa', 'Bulgarie', 'Hongrie', 'Chine', 'Dossier de visa'],
       statsTitre: 'Des chiffres, pas des promesses.',
       stats: [[5000, '+', '', 'étudiants accompagnés'], [7, '', '', 'destinations en Europe et en Chine'], [18, '', ' %', 'de refus de visa en Roumanie en 2024, le plus bas des consulats européens en Algérie'], [2, '', '', 'cycles d’études : licence et master, toutes les spécialités']],
@@ -108,10 +108,10 @@
     },
     ar: {
       langBtn: 'FR', back: 'وكالة السفر',
-      nav: [['الدول', '#pays'], ['عرضنا', '#offre'], ['الخطوات', '#etapes'], ['الأسئلة', '#faq'], ['التقييم', '#diagnostic']],
+      nav: [['الدول', '#pays'], ['عرضنا', '#offre'], ['الخطوات', '#etapes'], ['الأسئلة', '#faq'], ['الاستشارة', '#diagnostic']],
       h1a: 'ادرس في', h1b: 'ليسانس أو ماستر.', rotPays: ['رومانيا', 'إسبانيا', 'إيطاليا', 'التشيك', 'بلغاريا', 'المجر', 'الصين'],
       sub: 'رومانيا، إسبانيا، إيطاليا، التشيك، الصين وغيرها. كل التخصصات، مع سنة تحضيرية للغة عند الحاجة. نختار معك البلد والجامعة ونرافقك حتى إيداع ملف التأشيرة.',
-      btn: 'تقييم مجاني', preuve: '+5000', preuveTxt: 'طالب رافقناهم، باسمنا السابق Dartina Center.',
+      btn: 'ابدأ مشروعك', preuve: '+5000', preuveTxt: 'طالب رافقناهم، باسمنا السابق Dartina Center.',
       engag: [['دول من الأكثر انفتاحاً على الطلبة الجزائريين', 'travel_explore'], ['جامعات حكومية ومعتمدة', 'school'], ['عقد مكتوب قبل أي دفع', 'description'], ['رسوم الدراسة تُدفع مباشرة للجامعة', 'account_balance']],
       paysPill: 'وجهاتنا', paysH1: 'سبع وجهات،', paysH2: 'ومرافقة واحدة.',
       pays: [
@@ -134,31 +134,31 @@
       offrePill: 'مرافقتنا', offreH1: 'من تسجيلك', offreH2: 'إلى وصولك.',
       packTag: 'القبول والتأشيرة', packNom: 'باقة القبول',
       packPts: ['اختيار البلد والجامعة والتخصص حسب ملفك', 'تحضير وإيداع ملف القبول', 'المتابعة حتى رسالة القبول', 'تحضير ملف التأشيرة والمرافقة حتى الإيداع'],
-      packGar: 'عرض سعر خاص بك بعد التقييم المجاني، مفصّل وموقّع في الوكالة قبل أي دفع.',
+      packGar: 'عرض سعر خاص بك بعد الاستشارة المجانية، مفصّل وموقّع في الوكالة قبل أي دفع.',
       optTag: 'اختياري', optNom: 'التكفل الكامل عند الوصول',
       optPts: ['الاستقبال في المطار عند وصولك', 'شريحة الهاتف والأيام الأولى', 'المساعدة في الاستقرار والإجراءات', 'مرافقة من الألف إلى الياء أثناء استقرارك'],
       hors: 'غير مشمول:', horsList: ['رسوم الدراسة', 'رسوم القنصلية', 'تذكرة الطيران', 'السكن', 'التأمين'],
       etapesTitre: 'كيف نعمل', why: ['دول مختارة بعناية', 'عقد مكتوب', 'جامعات موثوقة', 'متابعة حتى السفر'],
       etapesLead: '5 خطوات', etapesSub: 'كل شيء يتم مع فريقنا عبر واتساب أو في المكتب. لا دفع عبر الإنترنت.',
-      etapes: [['تقييم مجاني', 'تملأ الاستمارة ويتصل بك مستشار بالدول والميزانية المناسبة لك.'], ['اختيار الجامعة', 'نقارن الخيارات معاً ونوقع عقداً مكتوباً.'], ['القبول', 'نحضّر ملفك ونودعه حتى رسالة القبول.'], ['التأشيرة', 'تدفع رسوم الدراسة للجامعة، ثم نحضّر ملف التأشيرة.'], ['السفر', 'تسافر وحدك، أو مع التكفل الكامل عند الوصول.']],
+      etapes: [['استشارة مجانية', 'تملأ الاستمارة ويتصل بك مستشار بالدول والميزانية المناسبة لك.'], ['اختيار الجامعة', 'نقارن الخيارات معاً ونوقع عقداً مكتوباً.'], ['القبول', 'نحضّر ملفك ونودعه حتى رسالة القبول.'], ['التأشيرة', 'تدفع رسوم الدراسة للجامعة، ثم نحضّر ملف التأشيرة.'], ['السفر', 'تسافر وحدك، أو مع التكفل الكامل عند الوصول.']],
       faqH1: 'أسئلتكم،', faqH2: 'وأجوبتنا الصريحة.',
       faq: [
         ['لماذا هذه الدول؟', 'لأنها من الدول الأوروبية الأكثر انفتاحاً على الطلبة الجزائريين. رومانيا مثلاً لديها أدنى نسبة رفض بين القنصليات الأوروبية في الجزائر: 18% من تأشيرات شنغن رُفضت سنة 2024، مقابل 34% في المتوسط (المفوضية الأوروبية). نعمل فيها مع جامعات حكومية، ونحضّر كل ملف بعناية لنضع كل الحظوظ في صالحك.'],
-        ['كم تكلف سنة كاملة؟', 'يجب جمع رسوم الدراسة (تُدفع للجامعة) والسكن والمعيشة والتأمين والتأشيرة والتذكرة. نعطيك تقديراً كاملاً ومكتوباً للبلد المختار، مع عرض سعرنا، بعد التقييم المجاني.'],
+        ['كم تكلف سنة كاملة؟', 'يجب جمع رسوم الدراسة (تُدفع للجامعة) والسكن والمعيشة والتأمين والتأشيرة والتذكرة. نعطيك تقديراً كاملاً ومكتوباً للبلد المختار، مع عرض سعرنا، بعد الاستشارة المجانية.'],
         ['لا أتكلم لغة البلد، هل هذا ممكن؟', 'نعم. برامج كثيرة بالإنجليزية وبعضها بالفرنسية. وإلا فالسنة التحضيرية تسمح بتعلم اللغة لمدة سنة قبل الليسانس أو الماستر.'],
         ['هل ستُعادل شهادتي في الجزائر؟', 'نقترح فقط جامعات حكومية أو معتمدة. قبل تسجيلك نتحقق معك من إجراءات المعادلة لدى وزارة التعليم العالي، ولدى وزارة الصحة بالنسبة للطب.'],
         ['من يستلم رسوم الدراسة؟', 'الجامعة مباشرة، في حساب باسمها. الوكالة لا تستلم أبداً رسوم دراستك.'],
         ['متى يجب أن أبدأ؟', 'في أقرب وقت. في رومانيا تُودع الملفات ابتداءً من مارس وبعض الأماكن محدودة لكل بلد. للدخول في سبتمبر يجب البدء في بداية السنة.']
       ],
-      contactH1: 'مستعد للسفر؟', contactH2: 'قم بتقييمك المجاني.',
+      contactH1: 'مستعد للسفر؟', contactH2: 'ابدأ باستشارة مجانية.',
       contactTxt: 'أجب عن بعض الأسئلة. يفتح الزر واتساب مع طلبك جاهزاً، ويرد عليك مستشار.',
-      fTitre: 'تقييم مجاني', fNom: 'الاسم الكامل', fTel: 'رقم واتساب', fNiveau: 'مستواك', niveaux: ['أدرس للباكالوريا', 'حاصل على الباكالوريا', 'ليسانس', 'ماستر', 'آخر'],
+      fTitre: 'استشارة مجانية', fNom: 'الاسم الكامل', fTel: 'رقم واتساب', fNiveau: 'مستواك', niveaux: ['أدرس للباكالوريا', 'حاصل على الباكالوريا', 'ليسانس', 'ماستر', 'آخر'],
       fMoy: 'معدل الباكالوريا', fFil: 'التخصص المطلوب', filieres: ['الطب، طب الأسنان، الصيدلة', 'الهندسة', 'الإعلام الآلي', 'التجارة والتسيير', 'آخر', 'لم أقرر بعد'],
       fPays: 'البلد المطلوب', paysOpt: ['رومانيا', 'إسبانيا', 'إيطاليا', 'التشيك', 'بلغاريا', 'المجر', 'الصين', 'صربيا', 'لم أقرر بعد'],
       fBudget: 'الميزانية السنوية (الدراسة والمعيشة)', budgets: ['أقل من 4000 يورو', '4000 إلى 7000 يورو', '7000 إلى 10000 يورو', 'أكثر من 10000 يورو'],
       fLangue: 'اللغة التي تتقنها', langues: ['الفرنسية', 'الإنجليزية', 'الفرنسية والإنجليزية', 'لا هذه ولا تلك'],
       fSend: 'أرسل عبر واتساب', fHint: 'معلوماتك تُرسل فقط لفريقنا عبر واتساب.',
-      msgForm: 'السلام عليكم Massar Study، هذا طلب التقييم:', msgGen: 'السلام عليكم Massar Study، أرغب في معلومات حول الدراسة في الخارج.',
+      msgForm: 'السلام عليكم Massar Study، هذا طلب الاستشارة:', msgGen: 'السلام عليكم Massar Study، أرغب في معلومات حول الدراسة في الخارج.',
       defile: ['رومانيا', 'ليسانس', 'إسبانيا', 'ماستر', 'إيطاليا', 'كل التخصصات', 'التشيك', 'سنة تحضيرية', 'بلغاريا', 'المجر', 'الصين', 'ملف التأشيرة'],
       statsTitre: 'أرقام، لا وعود.',
       stats: [[5000, '+', '', 'طالب رافقناهم'], [7, '', '', 'وجهات في أوروبا والصين'], [18, '', '%', 'نسبة رفض التأشيرة لرومانيا سنة 2024، الأدنى بين القنصليات الأوروبية في الجزائر'], [2, '', '', 'مستويات: ليسانس وماستر، كل التخصصات']],
@@ -392,7 +392,7 @@
     if (window.matchMedia('(pointer: fine)').matches) setTimeout(function () { try { form.elements.nom.focus({ preventScroll: true }); } catch (err) {} }, 1200);
   }, true);
 
-  // Bouton « Diagnostic gratuit » flottant : visible après le haut de page, caché quand le formulaire est à l'écran
+  // Bouton « Commencer mon projet » flottant : visible après le haut de page, caché quand le formulaire est à l'écran
   function boutonFlottant() {
     var b = document.querySelector('.e-sticky'), hero = document.querySelector('.e-hero'), diag = document.getElementById('diagnostic');
     if (!b || !hero || !diag || !('IntersectionObserver' in window)) return;
