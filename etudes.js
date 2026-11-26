@@ -54,7 +54,7 @@
         { drap: '🇨🇳', rang: 'Asie', nom: 'Chine', acc: 'Licence et master en anglais ou en chinois, dans de grandes universités.', pts: ['Année prépa de chinois si besoin', 'Visa délivré sur lettre d’admission', 'Bourses de certaines universités'] }
       ],
       paysCta: 'Je veux étudier ici',
-      pbPill: 'Plan B', pbH1: 'Visa Schengen refusé&nbsp;?', pbH2: 'Ton projet continue.',
+      pbPill: 'Plan B', pbH1: 'Visa Schengen <span class="nw">refusé&nbsp;?</span>', pbH2: 'Ton projet continue.',
       pbTxt: 'Si l’Europe Schengen ne marche pas pour toi, on a une solution de repli : des pays hors Schengen, avec un visa déposé à Alger et une année prépa sans diplôme d’anglais. Tu ne perds pas ton année.',
       planB: [
         { drap: '🇷🇸', rang: 'Europe hors Schengen', nom: 'Serbie', acc: 'Le visa étudiant se dépose à l’ambassade de Serbie à Alger.', pts: ['Année prépa de serbe, sans diplôme d’anglais', 'Des frais parmi les plus bas d’Europe', 'Travail autorisé 20 h par semaine'] }

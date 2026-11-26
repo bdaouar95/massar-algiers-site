@@ -101,7 +101,7 @@
       // Grands titres mot par mot
       gsap.utils.toArray('.card .h2, .reserver > h2, .e-stats-titre').forEach(function (el) {
         if (window.SplitText) {
-          var sp = SplitText.create(el, { type: 'words', mask: 'words' });
+          var sp = SplitText.create(el, { type: 'words', mask: 'words', wordDelimiter: ' ', ignore: '.nw' });
           gsap.from(sp.words, { yPercent: 110, duration: 0.9, ease: 'expo.out', stagger: 0.05, scrollTrigger: { trigger: el, start: 'top 88%' } });
         } else {
           gsap.from(el, { y: 50, opacity: 0, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 88%' } });
