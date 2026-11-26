@@ -33,6 +33,7 @@ Les textes fixes de l'interface (menus, titres, étapes) sont dans `app.js`, en 
 - Ne jamais écrire « visa garanti »
 - Les frais de scolarité des universités sont indicatifs : les revérifier chaque année
 - Le formulaire de diagnostic envoie la demande sur WhatsApp au +213 559 92 37 09
+- Après chaque modification de `etudes.js`, `etudes.css` ou `etudes-anim.js`, changer le numéro `?v=` dans `etudes.html` (par exemple la date du jour), sinon les téléphones gardent l'ancienne version en mémoire
 - Animations dans `etudes-anim.js` : GSAP 3.13 (gratuit, y compris en commercial), ScrollTrigger, SplitText et défilement fluide Lenis, chargés depuis cdn.jsdelivr.net. Elles se coupent automatiquement si le téléphone demande de réduire les animations. Les chiffres animés et les textes des bandes défilantes sont dans `etudes.js` (`stats`, `defile`, `orbChips`)
 - Photos dans `assets/etudes/` : libres de droits (Wikimedia Commons). Les crédits en bas de page sont **obligatoires**, ne pas les retirer. Pour changer une photo, remplacer le fichier et mettre à jour `HERO`, `PHOTOS_PAYS` et `CREDITS` en haut de `etudes.js`
 - Galerie « Nos étudiants » : 6 photos de nos arrivées 2020-2021 (Instagram @massar.study), dans `assets/etudes/nos-etudiants/`, liste `NOS_PHOTOS` dans `etudes.js`. Les étudiants reconnaissables doivent avoir donné leur accord

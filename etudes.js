@@ -388,7 +388,8 @@
     var choix = form.elements.pays, nom = lien.getAttribute('data-pays');
     for (var i = 0; i < choix.options.length; i++) { if (choix.options[i].text === nom) { choix.selectedIndex = i; break; } }
     form.classList.remove('e-flash'); void form.offsetWidth; form.classList.add('e-flash');
-    setTimeout(function () { try { form.elements.nom.focus({ preventScroll: true }); } catch (err) {} }, 1200);
+    // Curseur dans « Nom » seulement sur ordinateur (sur téléphone, le clavier ferait sauter la page)
+    if (window.matchMedia('(pointer: fine)').matches) setTimeout(function () { try { form.elements.nom.focus({ preventScroll: true }); } catch (err) {} }, 1200);
   }, true);
 
   // Bouton « Diagnostic gratuit » flottant : visible après le haut de page, caché quand le formulaire est à l'écran
