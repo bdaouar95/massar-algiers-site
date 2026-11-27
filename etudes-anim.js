@@ -94,7 +94,7 @@
       gsap.from('.e-hero .hero-sub, .e-hero .hero-btns', { y: 24, opacity: 0, duration: 0.9, ease: 'power3.out', stagger: 0.12, delay: 0.55 });
       gsap.from('.e-preuve', { y: 40, opacity: 0, duration: 1, ease: 'power3.out', delay: 0.75 });
       gsap.from('.e-engag > div', { y: 30, opacity: 0, duration: 0.8, stagger: 0.08, ease: 'power3.out', delay: 0.95 });
-      gsap.fromTo('.e-hero-photo img', { scale: 1.18 }, { scale: 1, duration: 2.6, ease: 'power2.out' });
+      gsap.fromTo('.e-hero-photo img, .e-hero-photo video', { scale: 1.18 }, { scale: 1, duration: 2.6, ease: 'power2.out' });
       gsap.to('.e-hero-photo', { yPercent: 16, ease: 'none', scrollTrigger: { trigger: '.e-hero', start: 'top top', end: 'bottom top', scrub: true } });
       rotation();
 

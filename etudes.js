@@ -9,6 +9,13 @@
 
   // Photos libres de droits (Wikimedia Commons). Les crédits s'affichent en bas de page, obligatoires pour CC BY-SA.
   var HERO = 'assets/etudes/hero-etudiants-cluj.jpg';
+  // Vidéos (Mixkit, licence gratuite) : boucle de fond du haut de page et présentation de 30 s
+  var HERO_VIDEO = 'assets/etudes/video/hero-campus.mp4', HERO_POSTER = 'assets/etudes/video/hero-campus.jpg';
+  var PRES_VIDEO = 'assets/etudes/video/massar-study-presentation.mp4', PRES_POSTER = 'assets/etudes/video/massar-study-presentation.jpg';
+  function videoPermise() {
+    var c = navigator.connection;
+    return !(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) && !(c && c.saveData);
+  }
   var PHOTOS_PAYS = ['assets/etudes/roumanie-umf-iasi.jpg', 'assets/etudes/espagne-universite-alicante.jpg', 'assets/etudes/italie-universite-padoue.jpg', 'assets/etudes/tchequie-universite-charles.jpg', 'assets/etudes/bulgarie-universite-sofia.jpg', 'assets/etudes/hongrie-universite-debrecen.jpg', 'assets/etudes/chine-universite-tsinghua.jpg'];
   // Vraies photos de nos étudiants (avec leur accord), dans assets/etudes/nos-etudiants/.
   // La section « Nos étudiants » reste cachée tant que cette liste est vide.
@@ -42,6 +49,8 @@
       h1a: 'Étudier en', h1b: 'en licence ou en master.', rotPays: ['Roumanie', 'Espagne', 'Italie', 'Tchéquie', 'Bulgarie', 'Hongrie', 'Chine'],
       sub: 'Roumanie, Espagne, Italie, Tchéquie, Chine et plus. Toutes les spécialités, avec une année prépa de langue si besoin. On choisit avec toi le pays et l’université, et on t’accompagne jusqu’au dépôt du visa.',
       btn: 'Commencer mon projet', preuve: '+5 000', preuveTxt: 'étudiants accompagnés, sous notre ancien nom Dartina Center.',
+      vidPill: 'En 30 secondes', vidH1: '<bdi>Massar Study</bdi>,', vidH2: 'en une vidéo.', vidTxt: 'Qui on est, nos 7 destinations, le plan B, nos 5 étapes et nos engagements. Sans le son, tout est écrit.',
+      vidPts: ['+5 000 étudiants accompagnés', 'Licence et master, toutes les spécialités', 'Consultation gratuite, sans engagement'], vidLabel: 'Vidéo de présentation de Massar Study',
       engag: [['Des pays parmi les plus ouverts aux étudiants algériens', 'travel_explore'], ['Universités publiques et accréditées', 'school'], ['Contrat écrit avant tout paiement', 'description'], ['Scolarité payée directement à l’université', 'account_balance']],
       paysPill: 'Nos destinations', paysH1: 'Sept destinations,', paysH2: 'un seul accompagnement.',
       pays: [
@@ -112,6 +121,8 @@
       h1a: 'ادرس في', h1b: 'ليسانس أو ماستر.', rotPays: ['رومانيا', 'إسبانيا', 'إيطاليا', 'التشيك', 'بلغاريا', 'المجر', 'الصين'],
       sub: 'رومانيا، إسبانيا، إيطاليا، التشيك، الصين وغيرها. كل التخصصات، مع سنة تحضيرية للغة عند الحاجة. نختار معك البلد والجامعة ونرافقك حتى إيداع ملف التأشيرة.',
       btn: 'ابدأ مشروعك', preuve: '+5000', preuveTxt: 'طالب رافقناهم، باسمنا السابق Dartina Center.',
+      vidPill: 'في 30 ثانية', vidH1: '<bdi>Massar Study</bdi>', vidH2: 'في فيديو واحد.', vidTxt: 'من نحن، وجهاتنا السبع، الخطة البديلة، مراحلنا الخمس والتزاماتنا. بدون صوت، كل شيء مكتوب.',
+      vidPts: ['+5000 طالب رافقناهم', 'ليسانس وماستر، كل التخصصات', 'استشارة مجانية بدون التزام'], vidLabel: 'فيديو تعريفي بـ Massar Study',
       engag: [['دول من الأكثر انفتاحاً على الطلبة الجزائريين', 'travel_explore'], ['جامعات حكومية ومعتمدة', 'school'], ['عقد مكتوب قبل أي دفع', 'description'], ['رسوم الدراسة تُدفع مباشرة للجامعة', 'account_balance']],
       paysPill: 'وجهاتنا', paysH1: 'سبع وجهات،', paysH2: 'ومرافقة واحدة.',
       pays: [
@@ -229,7 +240,9 @@
 
       // Hero
       '<section id="top" class="e-hero">' +
-        '<div class="e-hero-photo"><img class="cover" src="' + HERO + '" alt="" fetchpriority="high" decoding="async"></div><div class="e-hero-voile"></div>' +
+        '<div class="e-hero-photo">' + (videoPermise()
+          ? '<video class="cover" src="' + HERO_VIDEO + '" poster="' + HERO_POSTER + '" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>'
+          : '<img class="cover" src="' + HERO + '" alt="" fetchpriority="high" decoding="async">') + '</div><div class="e-hero-voile"></div>' +
         '<header class="hero-bar">' +
           '<a href="#top" class="brand" aria-label="Massar Study">' + logo('#ffffff') +
             '<div class="brand-txt"><div class="brand-name">Massar Study</div><div class="brand-sub">' + esc(t.exNom) + '</div></div></a>' +
@@ -253,6 +266,16 @@
       '<div class="e-defile" aria-hidden="true"><div class="e-defile-piste" dir="ltr">' +
         map(t.defile.concat(t.defile), function (m) { return '<span>' + esc(m) + '</span><i>✦</i>'; }) +
       '</div></div>' +
+
+      // Vidéo de présentation (30 s, sans son)
+      '<section id="video" class="card card-dark e-video-sec">' +
+        '<div class="e-video-txt">' + pill(t.vidPill, 'blanche') + h2(t.vidH1, esc(t.vidH2)) + '<p>' + esc(t.vidTxt) + '</p>' +
+          '<ul>' + map(t.vidPts, function (x) { return '<li>' + ic('check_circle') + '<span>' + esc(x) + '</span></li>'; }) + '</ul>' +
+          '<a class="btn btn-blanc" href="#diagnostic">' + esc(t.btn) + '</a>' +
+        '</div>' +
+        '<div class="e-video-tel"><video class="e-video" src="' + PRES_VIDEO + '" poster="' + PRES_POSTER + '" muted loop playsinline preload="none"' +
+          (videoPermise() ? '' : ' controls') + ' aria-label="' + esc(t.vidLabel) + '"></video></div>' +
+      '</section>' +
 
       // Chiffres clés
       '<section class="card e-stats" aria-label="' + esc(t.statsTitre) + '">' +
@@ -376,6 +399,7 @@
       '<a class="wa-float" href="' + waGen + '" target="_blank" rel="noopener" aria-label="WhatsApp">' + waIco() + '</a>' +
       '</div>';
     boutonFlottant();
+    videoVisible();
     if (window.MASSAR_ANIM) (document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve()).then(function () { window.MASSAR_ANIM(); });
   }
 
@@ -393,6 +417,18 @@
   }, true);
 
   // Bouton « Commencer mon projet » flottant : visible après le haut de page, caché quand le formulaire est à l'écran
+  // La présentation démarre quand elle est à l'écran et s'arrête quand on la quitte ; un appui met en pause
+  function videoVisible() {
+    var v = document.querySelector('.e-video');
+    if (!v || !videoPermise() || !('IntersectionObserver' in window)) return;
+    var pauseManuelle = false;
+    v.addEventListener('click', function () { if (v.paused) { pauseManuelle = false; v.play(); } else { pauseManuelle = true; v.pause(); } });
+    new IntersectionObserver(function (en) {
+      if (en[0].isIntersecting) { if (!pauseManuelle) { var p = v.play(); if (p && p.catch) p.catch(function () { v.controls = true; }); } }
+      else v.pause();
+    }, { threshold: 0.4 }).observe(v);
+  }
+
   function boutonFlottant() {
     var b = document.querySelector('.e-sticky'), hero = document.querySelector('.e-hero'), diag = document.getElementById('diagnostic');
     if (!b || !hero || !diag || !('IntersectionObserver' in window)) return;

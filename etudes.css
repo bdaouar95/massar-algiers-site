@@ -275,3 +275,19 @@ html[dir="rtl"] .e-sticky { padding: 0 16px 0 22px; }
   .e-sticky { height: 46px; font-size: 14px; padding: 0 18px 0 14px; }
 }
 .nw { white-space: nowrap; }
+
+/* Vidéo de présentation (30 s, sans son), dans un cadre de téléphone */
+.e-video-sec { padding: var(--pad-y) var(--pad-x); display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 72px); align-items: center;
+  background: radial-gradient(ellipse at 85% 20%, rgba(246,185,26,.14), rgba(246,185,26,0) 55%), var(--nuit); }
+.e-video-txt { display: flex; flex-direction: column; gap: 18px; align-items: flex-start; }
+.e-video-txt p { color: #C9D8E4; font-size: 16px; line-height: 1.6; max-width: 480px; }
+.e-video-txt ul { list-style: none; display: grid; gap: 12px; padding: 0; margin: 4px 0 8px; }
+.e-video-txt li { display: flex; align-items: center; gap: 10px; font-weight: 600; }
+.e-video-txt li .ic { color: var(--dore); }
+.e-video-tel { justify-self: center; width: min(100%, 340px); aspect-ratio: 9 / 16; border-radius: 40px; padding: 10px; background: #050f19;
+  box-shadow: 0 0 0 2px rgba(255,255,255,.08), 0 40px 80px rgba(0,0,0,.45), 0 0 120px rgba(246,185,26,.12); }
+.e-video { width: 100%; height: 100%; object-fit: cover; border-radius: 30px; display: block; background: var(--nuit); cursor: pointer; }
+@media (max-width: 860px) {
+  .e-video-sec { grid-template-columns: 1fr; }
+  .e-video-tel { width: min(78vw, 320px); order: -1; }
+}
